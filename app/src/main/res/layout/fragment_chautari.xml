@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/create_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_profile"
+            android:layout_marginTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/post_create"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/pp_boy_png"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="2dp" />
+
+                <EditText
+                    android:id="@+id/create_post_editext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/post_create"
+                    android:hint="Create Post" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:src="@mipmap/mypost" />
+
+                <ImageView
+                    android:id="@+id/camera_share"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/create_post_editext"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/post_create"
+                    app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
+
+                <TextView
+                    android:id="@+id/camera_share_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/create_post_editext"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/camera_share"
+                    android:text="Camera" />
+
+                <ImageView
+                    android:id="@+id/camera_location"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/create_post_editext"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/camera_share_text"
+                    app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+                <TextView
+                    android:id="@+id/camera_location_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/create_post_editext"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/camera_location"
+                    android:text="Location" />
+
+                <ImageView
+                    android:id="@+id/video_post"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/create_post_editext"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/camera_location_text"
+                    app:srcCompat="@drawable/ic_videocam_black_24dp" />
+
+                <TextView
+                    android:id="@+id/video_post_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/create_post_editext"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/video_post"
+                    android:text="Video" />
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/linearlayout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/create_post"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/hot" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/most_discussed" />
+            </RelativeLayout>
+
+            <!--<TextView-->
+            <!--android:id="@+id/hot_news_textView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:background="@drawable/rounded_corner"-->
+            <!--android:padding="5dp"-->
+            <!--android:text="Hot"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textSize="18sp" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/mostDiscussied_news_textView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toRightOf="@id/hot_news_textView"-->
+            <!--android:background="@drawable/rounded_corner"-->
+            <!--android:padding="5dp"-->
+            <!--android:text="Most Discussed"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textSize="18sp" />-->
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearlayout_text"
+            android:layout_marginTop="10dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearlayout_text">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_timline_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/pp_boy_png"
+                        app:civ_border_color="@color/colorPrimary"
+                        app:civ_border_width="2dp" />
+
+                    <TextView
+                        android:id="@+id/profile_timeline_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_toRightOf="@id/profile_timline_image"
+                        android:text="Bill Gates
+
+"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="5dp"
+                        android:text="May-21-2018" />
+
+
+                    <ImageView
+                        android:id="@+id/profile_share_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_timline_image"
+                        android:layout_marginTop="5dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_share_image"
+                        android:layout_marginLeft="5dp"
+                        android:text="Have fun with Android" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/status"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/black_overlay" />
+
+                    <ImageView
+                        android:id="@+id/namaste_imageView"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/view"
+                        android:layout_marginTop="5dp"
+                        android:src="@mipmap/namaste" />
+
+                    <TextView
+                        android:id="@+id/num_namaste"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/namaste_imageView"
+                        android:text="7" />
+
+                    <ImageView
+                        android:id="@+id/namaste_chalfal"
+                        android:layout_width="35dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/view"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/num_namaste"
+                        android:src="@mipmap/chalfal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/namaste_chalfal"
+                        android:text="7" />
+
+                    <TextView
+                        android:id="@+id/socialcause_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/view"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/rounded_corner"
+                        android:padding="5dp"
+                        android:text="Social Cause"
+                        android:textAlignment="center"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

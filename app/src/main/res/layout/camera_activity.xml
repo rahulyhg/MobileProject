@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_width="match_parent"
+    app:layout_height="match_parent"
+    app:orientation="vertical"
+    tools:ignore="NamespaceTypo">
+
+    <RelativeLayout
+        app:id="@+id/camview"
+        app:layout_width="match_parent"
+        app:layout_height="wrap_content">
+
+        <SurfaceView
+            app:id="@+id/sview"
+            app:layout_width="match_parent"
+            app:layout_height="match_parent"
+            app:layout_alignParentBottom="true"
+            app:layout_alignParentLeft="true" />
+
+        <ImageView
+            app:id="@+id/camera_image"
+            app:layout_width="match_parent"
+            app:layout_height="match_parent"
+            app:layout_alignParentBottom="true"
+            app:contentDescription="@string/app_name" />
+
+        <ImageView
+            app:id="@+id/camera_imagee"
+            app:layout_width="match_parent"
+            app:layout_height="400dp"
+            app:layout_alignParentBottom="true"
+            app:layout_alignParentStart="true"
+            app:background="@mipmap/english"
+            app:contentDescription="@string/app_name" />
+
+        <ImageButton
+            app:id="@+id/selfie"
+            app:layout_width="40dp"
+            app:layout_height="40dp"
+            app:layout_alignParentRight="true"
+            app:background="@drawable/ic_cached_black_24dp" />
+
+        <ImageButton
+            app:id="@+id/button1"
+            app:layout_width="80dp"
+            app:layout_height="80dp"
+            app:layout_above="@+id/view"
+            app:layout_centerHorizontal="true"
+            app:background="@drawable/ic_add_circle_outline_black_24dp"
+            app:hint="Take Picture" />
+
+        <ImageButton
+            app:id="@+id/gallery"
+            app:layout_width="50dp"
+            app:layout_height="50dp"
+            app:layout_alignBottom="@+id/button1"
+            app:layout_alignParentStart="true"
+            app:layout_marginStart="75dp"
+            app:background="@drawable/ic_image_black_24dp" />
+
+        <ImageButton
+            app:id="@+id/edit"
+            app:layout_width="50dp"
+            app:layout_height="50dp"
+            app:layout_above="@id/view"
+            app:layout_alignBottom="@+id/button1"
+            app:layout_alignParentEnd="true"
+            app:layout_marginEnd="71dp"
+            app:background="@drawable/ic_collections_black_24dp" />
+
+        <ProgressBar
+            app:id="@+id/progress_bar"
+            app:layout_width="wrap_content"
+            app:layout_height="wrap_content"
+            app:layout_centerInParent="true" />
+
+
+        <View
+            app:id="@+id/view"
+            app:layout_width="match_parent"
+            app:layout_height="10dp"
+            app:layout_alignParentBottom="true"
+            app:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
