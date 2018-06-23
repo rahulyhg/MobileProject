@@ -6,6 +6,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface SamajApi {
-    @GET("community-list")
+    @GET("community/api/community-list")
     Call<List<SamajDto>> getSamajDetail();
 }
