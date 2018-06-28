@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 
 
 import com.namastenepal.namastenepal.namastenepal.ApiClient.ApiClient;
+import com.namastenepal.namastenepal.namastenepal.MainActivity.Fragments.SamajFragment.SamajService.SamajApi;
 import com.namastenepal.namastenepal.namastenepal.R;
 
 import java.util.List;
