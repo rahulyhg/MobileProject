@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_chautari_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/pp_boy_png"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/profile_timeline_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/profile_chautari_image"
+            android:text="Bill Gates
+
+"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/profile_timeline_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:text="May-21-2018" />
+
+
+        <ImageView
+            android:id="@+id/profile_share_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_timline_image"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <!--<VideoView-->
+            <!--android:id="@+id/profile_share_video"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/profile_timline_image"-->
+            <!--android:layout_marginTop="5dp" />-->
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_share_image"
+            android:layout_marginLeft="5dp"
+            android:text="Have fun with Android" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/status"
+            android:layout_marginTop="5dp"
+            android:background="@color/black_overlay" />
+
+        <ImageView
+            android:id="@+id/namaste_imageView"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/view"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/namaste" />
+
+        <TextView
+            android:id="@+id/num_namaste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/namaste_imageView"
+            android:text="7" />
+
+        <ImageView
+            android:id="@+id/namaste_chalfal"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/view"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/num_namaste"
+            android:src="@mipmap/chalfal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/namaste_chalfal"
+            android:text="7" />
+
+        <TextView
+            android:id="@+id/type_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/view"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:text="Social Cause"
+            android:textAlignment="center"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
