@@ -16,6 +16,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.namastenepal.namastenepal.namastenepal.Camera.CameraActivity;
 import com.namastenepal.namastenepal.namastenepal.MainActivity.Fragments.ChautariFragment.ChautariFragment;
 import com.namastenepal.namastenepal.namastenepal.MainActivity.Fragments.Profile.Profile;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private FrameLayout vFragmentHolder;
     BottomNavigationView navigation;
     private Toolbar vToolbar_main;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         permission();
         initComponent();
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void initComponent() {
         vFragmentHolder = findViewById(R.id.fragment_holder_main);
+
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
       //  vToolbar_main = findViewById(R.id.toolbar_main);
 

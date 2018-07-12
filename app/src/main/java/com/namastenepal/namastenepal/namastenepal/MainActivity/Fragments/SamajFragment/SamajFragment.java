@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 import android.support.v7.widget.RecyclerView;
 
@@ -29,6 +30,7 @@ public class SamajFragment extends Fragment implements SwipeRefreshLayout.OnRefr
     SamajApi samajApi;
     private RecyclerView.LayoutManager layoutManager;
     SwipeRefreshLayout vSwipeRefreshLayout;
+    private EditText vCreate_post;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,6 +45,7 @@ public class SamajFragment extends Fragment implements SwipeRefreshLayout.OnRefr
                 fetchInformation();
             }
         });
+
         return view;
     }
 
@@ -51,6 +54,7 @@ public class SamajFragment extends Fragment implements SwipeRefreshLayout.OnRefr
         layoutManager = new LinearLayoutManager(getContext());
         vRecyclerView.setLayoutManager(layoutManager);
         vRecyclerView.setHasFixedSize(true);
+
         vSwipeRefreshLayout = view.findViewById(R.id.swipeRefresh);
     }
 

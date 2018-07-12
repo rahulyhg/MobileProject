@@ -39,9 +39,9 @@ public class Samaj_Activity extends AppCompatActivity {
     }
 
     public void initComponent() {
-        vCircleImageView_Samaj=findViewById(R.id.samaj_profile_image);
-        vSamaj_name_samaj = findViewById(R.id.samaj_name_activity);
-        vSamaj_description_samaj = findViewById(R.id.samaj_description_activity);
+//        vCircleImageView_Samaj=findViewById(R.id.samaj_profile_image);
+//        vSamaj_name_samaj = findViewById(R.id.samaj_name_activity);
+//        vSamaj_description_samaj = findViewById(R.id.samaj_description_activity);
 //        FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(getSupportFragmentManager(), FragmentPagerItems.with(getApplicationContext())
 //                .add(R.string.my_post, MyPosts.class)
 //                .add(R.string.friend_post, FriendPosts.class)

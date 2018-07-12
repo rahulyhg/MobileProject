@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.support.v7.app.ActionBar;
 import android.widget.Toast;
 
+import com.namastenepal.namastenepal.namastenepal.Login.LoginDto.LoginDto;
 import com.namastenepal.namastenepal.namastenepal.Login.Service.LoginService;
 import com.namastenepal.namastenepal.namastenepal.Login.Service.ServiceGenerator;
 import com.namastenepal.namastenepal.namastenepal.Login.Service.User;
@@ -25,9 +26,16 @@ import com.namastenepal.namastenepal.namastenepal.forgetPassword.ForgetPasswordA
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class LoginScreenActivity extends AppCompatActivity {
+    Retrofit.Builder builder = new Retrofit.Builder().baseUrl("https://www.namastenepal.com/")
+            .addConverterFactory(GsonConverterFactory.create());
+    Retrofit retrofit = builder.build();
+    LoginService loginService = retrofit.create(LoginService.class);
+
 
     private static final boolean AUTO_HIDE = true;
     private static final int AUTO_HIDE_DELAY_MILLIS = 5000;
@@ -84,8 +92,9 @@ public class LoginScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginScreenActivity.this, MainActivity.class);
-                startActivity(intent);
-          //      checkData();
+                //     startActivity(intent);
+                Login();
+                //      checkData();
             }
         });
         vSign_Up_Button.setOnClickListener(new View.OnClickListener() {
@@ -148,24 +157,28 @@ public class LoginScreenActivity extends AppCompatActivity {
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
-    public void checkData() {
-        LoginService loginService =
-                ServiceGenerator.createService(LoginService.class, vInput_Email.getText().toString(), vInput_Password.getText().toString());
-        Call<User> call = loginService.basicLogin();
-        call.enqueue(new Callback<User>() {
+    private String token;
+
+    public void Login() {
+        LoginDto loginDto = new LoginDto(vInput_Email.getText().toString(), vInput_Password.getText().toString());
+        Call<LoginDto> call = loginService.Login(loginDto);
+        call.enqueue(new Callback<LoginDto>() {
             @Override
-            public void onResponse(Call<User> call, Response<User> response) {
+            public void onResponse(Call<LoginDto> call, Response<LoginDto> response) {
                 if (response.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), "" + response, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Username and Password Matched", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(LoginScreenActivity.this, MainActivity.class);
+                    startActivity(intent);
                 } else {
-                    Toast.makeText(getApplicationContext(), "" + response, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Username and Password UnMatched", Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
-            public void onFailure(Call<User> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "" + t.getMessage(), Toast.LENGTH_LONG).show();
+            public void onFailure(Call<LoginDto> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
             }
         });
     }
+
 }

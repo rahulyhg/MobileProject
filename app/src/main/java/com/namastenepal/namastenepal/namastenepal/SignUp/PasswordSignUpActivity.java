@@ -57,6 +57,7 @@ public class PasswordSignUpActivity extends AppCompatActivity {
         call.enqueue(new Callback<SignUpDto>() {
             @Override
             public void onResponse(Call<SignUpDto> call, Response<SignUpDto> response) {
+                Toast.makeText(getApplicationContext(), "" + response.body(), Toast.LENGTH_LONG).show();
                 Snackbar snackbar = Snackbar.make(vRelativeLayout, "Confirmation Email Sent", Snackbar.LENGTH_LONG);
                 snackbar.show();
             }

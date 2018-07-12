@@ -8,9 +8,9 @@ public class SamajDto {
     private String subscriber;
     private String timestamp;
     private String updated;
-    private boolean is_private;
+//    private boolean is_private;
 
-    public SamajDto(String name, String slug, String background, String description, String subscriber, String timestamp, String updated, boolean is_private) {
+    public SamajDto(String name, String slug, String background, String description, String subscriber, String timestamp, String updated) {
         this.name = name;
         this.slug = slug;
         this.background = background;
@@ -18,7 +18,6 @@ public class SamajDto {
         this.subscriber = subscriber;
         this.timestamp = timestamp;
         this.updated = updated;
-        this.is_private = is_private;
     }
 
     public String getName() {
@@ -38,7 +37,7 @@ public class SamajDto {
     }
 
     public String getBackground() {
-        return "https://www.namastenepal.com/"+background;
+        return "https://www.namastenepal.com/" + background;
     }
 
     public void setBackground(String background) {
@@ -77,11 +76,4 @@ public class SamajDto {
         this.updated = updated;
     }
 
-    public boolean isIs_private() {
-        return is_private;
-    }
-
-    public void setIs_private(boolean is_private) {
-        this.is_private = is_private;
-    }
 }
