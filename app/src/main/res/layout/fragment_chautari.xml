@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
-    android:padding="5dp">
+    android:background="@color/background">
 
 
     <RelativeLayout
@@ -16,8 +15,7 @@
             android:id="@+id/create_post"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/card_profile"
-            android:layout_marginTop="5dp">
+            android:layout_below="@id/card_profile">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -28,6 +26,7 @@
                     android:id="@+id/post_create"
                     android:layout_width="40dp"
                     android:layout_height="30dp"
+                    android:layout_centerVertical="true"
                     android:layout_margin="5dp"
                     android:src="@mipmap/pp_boy_png"
                     app:civ_border_color="@color/colorPrimary"
@@ -35,75 +34,81 @@
 
                 <EditText
                     android:id="@+id/create_post_editext"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
                     android:layout_margin="10dp"
                     android:layout_toRightOf="@id/post_create"
-                    android:hint="Create Post" />
+                    android:background="@drawable/rounded_corner_big"
+                    android:hint="Create Post"
+                    android:padding="5dp"
+                    android:textStyle="bold" />
 
                 <ImageView
+                    android:id="@+id/post"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
                     android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/create_post_editext"
                     android:src="@mipmap/mypost" />
 
-                <ImageView
-                    android:id="@+id/camera_share"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_below="@id/create_post_editext"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_toRightOf="@id/post_create"
-                    app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
+                <!--<ImageView-->
+                <!--android:id="@+id/camera_share"-->
+                <!--android:layout_width="25dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_below="@id/create_post_editext"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_toRightOf="@id/post_create"-->
+                <!--app:srcCompat="@drawable/ic_camera_alt_black_24dp" />-->
 
-                <TextView
-                    android:id="@+id/camera_share_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/create_post_editext"
-                    android:layout_margin="5dp"
-                    android:layout_toRightOf="@id/camera_share"
-                    android:text="Camera" />
+                <!--<TextView-->
+                <!--android:id="@+id/camera_share_text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/create_post_editext"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:layout_toRightOf="@id/camera_share"-->
+                <!--android:text="Camera" />-->
 
-                <ImageView
-                    android:id="@+id/camera_location"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_below="@id/create_post_editext"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_toRightOf="@id/camera_share_text"
-                    app:srcCompat="@drawable/ic_location_on_black_24dp" />
+                <!--<ImageView-->
+                <!--android:id="@+id/camera_location"-->
+                <!--android:layout_width="25dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_below="@id/create_post_editext"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_toRightOf="@id/camera_share_text"-->
+                <!--app:srcCompat="@drawable/ic_location_on_black_24dp" />-->
 
-                <TextView
-                    android:id="@+id/camera_location_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/create_post_editext"
-                    android:layout_margin="5dp"
-                    android:layout_toRightOf="@id/camera_location"
-                    android:text="Location" />
+                <!--<TextView-->
+                <!--android:id="@+id/camera_location_text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/create_post_editext"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:layout_toRightOf="@id/camera_location"-->
+                <!--android:text="Location" />-->
 
-                <ImageView
-                    android:id="@+id/video_post"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_below="@id/create_post_editext"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_toRightOf="@id/camera_location_text"
-                    app:srcCompat="@drawable/ic_videocam_black_24dp" />
+                <!--<ImageView-->
+                <!--android:id="@+id/video_post"-->
+                <!--android:layout_width="25dp"-->
+                <!--android:layout_height="25dp"-->
+                <!--android:layout_below="@id/create_post_editext"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_toRightOf="@id/camera_location_text"-->
+                <!--app:srcCompat="@drawable/ic_videocam_black_24dp" />-->
 
-                <TextView
-                    android:id="@+id/video_post_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/create_post_editext"
-                    android:layout_margin="5dp"
-                    android:layout_toRightOf="@id/video_post"
-                    android:text="Video" />
+                <!--<TextView-->
+                <!--android:id="@+id/video_post_text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/create_post_editext"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:layout_toRightOf="@id/video_post"-->
+                <!--android:text="Video" />-->
 
             </RelativeLayout>
 
@@ -111,10 +116,12 @@
         </android.support.v7.widget.CardView>
 
         <LinearLayout
+
             android:id="@+id/linearlayout_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/create_post"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
@@ -145,6 +152,7 @@
         </LinearLayout>
 
         <android.support.v4.widget.SwipeRefreshLayout
+
             android:id="@+id/swipeRefresh_chautari"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -155,7 +163,7 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView_Chautari"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"></android.support.v7.widget.RecyclerView>
         </android.support.v4.widget.SwipeRefreshLayout>
 

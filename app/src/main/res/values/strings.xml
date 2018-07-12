@@ -31,5 +31,6 @@
         <item>Alphabet</item>
         <item>No of Subscriber</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "847229925119",
+    "firebase_url": "https://namaste-nepal-4e61d.firebaseio.com",
+    "project_id": "namaste-nepal-4e61d",
+    "storage_bucket": "namaste-nepal-4e61d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847229925119:android:f0df889ac2701492",
+        "android_client_info": {
+          "package_name": "com.namastenepal.namastenepal.namastenepal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "847229925119-b9g5pesfsqs26d31src98fvmrm1t3grq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.namastenepal.namastenepal.namastenepal",
+            "certificate_hash": "26e64f949b997d619e30e6d30bd535b29822a8d5"
+          }
+        },
+        {
+          "client_id": "847229925119-m6m0hvvbg1shqdljkag83nkd0btgv133.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATJ8RPeU8rAR1VdviYaV8WEF4enMSVyII"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "847229925119-m6m0hvvbg1shqdljkag83nkd0btgv133.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
