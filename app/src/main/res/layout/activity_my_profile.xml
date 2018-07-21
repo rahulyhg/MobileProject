@@ -309,7 +309,5 @@
         android:layout_below="@id/viewpagertab" />
 
 
-
-
 </RelativeLayout>
 

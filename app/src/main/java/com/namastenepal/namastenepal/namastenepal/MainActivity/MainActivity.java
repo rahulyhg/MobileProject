@@ -18,6 +18,7 @@ import android.widget.FrameLayout;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.namastenepal.namastenepal.namastenepal.Camera.CameraActivity;
+import com.namastenepal.namastenepal.namastenepal.ImageFilter.ImageFilter;
 import com.namastenepal.namastenepal.namastenepal.MainActivity.Fragments.ChautariFragment.ChautariFragment;
 import com.namastenepal.namastenepal.namastenepal.MainActivity.Fragments.Profile.Profile;
 import com.namastenepal.namastenepal.namastenepal.MainActivity.Fragments.SamajFragment.SamajFragment;
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     transaction.commit();
                     return true;
                 case R.id.navigation_notifications:
-                    Intent intent = new Intent(MainActivity.this, MyProfileActivity.class);
+                    Intent intent = new Intent(MainActivity.this, ImageFilter.class);
                     startActivity(intent);
                     return true;
                 case R.id.profile:
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                     ProfileTransaction.commit();
                     return true;
                 case R.id.navigation_message:
+                    Intent intent1 = new Intent(MainActivity.this, CameraActivity.class);
+                    startActivity(intent1);
                     return true;
             }
             return false;
@@ -82,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         vFragmentHolder = findViewById(R.id.fragment_holder_main);
 
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
-      //  vToolbar_main = findViewById(R.id.toolbar_main);
+        //  vToolbar_main = findViewById(R.id.toolbar_main);
 
     }
 

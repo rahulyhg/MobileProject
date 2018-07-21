@@ -68,7 +68,7 @@ public class ChautariFragment extends Fragment implements SwipeRefreshLayout.OnR
         vRecylerView.setLayoutManager(layoutManager);
         vRecylerView.setHasFixedSize(true);
         vSwipeRefresh = view.findViewById(R.id.swipeRefresh_chautari);
-        FirebaseCrash.log("Activity created");
+//        FirebaseCrash.log("Activity created");
 
     }
 

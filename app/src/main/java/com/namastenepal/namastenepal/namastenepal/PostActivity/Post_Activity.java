@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.flipboard.bottomsheet.BottomSheetLayout;
@@ -14,6 +15,7 @@ import com.namastenepal.namastenepal.namastenepal.R;
 public class Post_Activity extends AppCompatActivity {
     BottomSheetLayout vBottomSheetLayout;
     TextView vMapActivity;
+    RelativeLayout relativeLayoutV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class Post_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
         //        vCamera_Share_ImageView = view.findViewById(R.id.camera_share);
 //        vCamera_Share_TextView = view.findViewById(R.id.camera_share_text);
