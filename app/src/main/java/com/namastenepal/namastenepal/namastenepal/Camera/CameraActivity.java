@@ -32,6 +32,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.namastenepal.namastenepal.namastenepal.ImageFilter.ImageFilter;
 import com.namastenepal.namastenepal.namastenepal.R;
 
 import java.io.ByteArrayInputStream;
@@ -186,6 +187,13 @@ public class CameraActivity extends AppCompatActivity implements Callback {
                 openFrontFacingCamera();
             }
         });
+        vEditor.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CameraActivity.this, ImageFilter.class);
+                startActivity(intent);
+            }
+        });
         vCameraButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -193,7 +201,7 @@ public class CameraActivity extends AppCompatActivity implements Callback {
                 vOpenGallery.setVisibility(View.GONE);
                 vCameraButton.setVisibility(View.GONE);
                 vEditor.setVisibility(View.GONE);
-                CameraActivity.this.camera.takePicture(null, null, CameraActivity.this.mPicture);
+                // CameraActivity.this.camera.takePicture(null, null, CameraActivity.this.mPicture);
 
             }
         });
@@ -319,23 +327,20 @@ public class CameraActivity extends AppCompatActivity implements Callback {
     }
 
     public void surfaceCreated(SurfaceHolder holder) {
-        try {
-            this.camera.setDisplayOrientation(90);
-            this.camera = Camera.open();
-            Parameters p = this.camera.getParameters();
-            p.setFlashMode("auto");
-            this.camera.setParameters(p);
-            this.camera.setPreviewDisplay(holder);
-        } catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
-            finish();
-        }
+//        try {
+//            this.camera.setDisplayOrientation(90);
+//            this.camera = Camera.open();
+//            Parameters p = this.camera.getParameters();
+//            p.setFlashMode("auto");
+//            this.camera.setParameters(p);
+//            this.camera.setPreviewDisplay(holder);
+//        } catch (Exception e) {
+//            Toast.makeText(getApplicationContext(), "Error+Error", Toast.LENGTH_SHORT).show();
+//            finish();
+//        }
     }
 
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        if (this.previewRunning) {
-            this.camera.stopPreview();
-        }
         this.camera = Camera.open(this.camId);
         this.camParams = this.camera.getParameters();
         Size size = (Size) this.camParams.getSupportedPreviewSizes().get(0);
@@ -376,13 +381,15 @@ public class CameraActivity extends AppCompatActivity implements Callback {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        if (camHolder.getSurface() != null) {
-            camera.stopPreview();
-            camera.release();
-            camera = null;
-        }
-
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }
