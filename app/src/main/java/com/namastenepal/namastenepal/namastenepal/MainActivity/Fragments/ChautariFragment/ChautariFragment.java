@@ -51,19 +51,11 @@ public class ChautariFragment extends Fragment implements SwipeRefreshLayout.OnR
                 fetchInformation();
             }
         });
-        post.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), Post_Activity.class);
-                startActivity(intent);
-            }
-        });
         return view;
     }
 
     public void initComponent(View view) {
         vRecylerView = view.findViewById(R.id.recyclerView_Chautari);
-        post = view.findViewById(R.id.post);
         layoutManager = new LinearLayoutManager(getContext());
         vRecylerView.setLayoutManager(layoutManager);
         vRecylerView.setHasFixedSize(true);
@@ -88,7 +80,6 @@ public class ChautariFragment extends Fragment implements SwipeRefreshLayout.OnR
             @Override
             public void onFailure(Call<List<ChautariDto>> call, Throwable t) {
                 vSwipeRefresh.setRefreshing(true);
-                Toast.makeText(getContext(), "" + t, Toast.LENGTH_LONG).show();
             }
         });
     }

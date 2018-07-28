@@ -55,31 +55,24 @@
             android:layout_marginTop="5dp"
             android:text="May-21-2018" />
 
-        <RelativeLayout
-            android:id="@+id/media_relative_chautari"
+
+        <ImageView
+            android:id="@+id/profile_share_image_chautari"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/profile_chautari_image">
+            android:layout_below="@id/profile_chautari_image" />
 
-
-            <ImageView
-                android:id="@+id/profile_share_image_chautari"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp" />
-
-            <VideoView
-                android:id="@+id/profile_share_video"
-                android:layout_width="fill_parent"
-                android:layout_height="150dp"
-                android:layout_below="@id/profile_share_image_chautari" />
-        </RelativeLayout>
+        <VideoView
+            android:id="@+id/profile_share_video"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_share_image_chautari" />
 
         <TextView
             android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/media_relative_chautari"
+            android:layout_below="@id/profile_share_image_chautari"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/profile_chautari_image"
             android:text="Have fun with Android" />

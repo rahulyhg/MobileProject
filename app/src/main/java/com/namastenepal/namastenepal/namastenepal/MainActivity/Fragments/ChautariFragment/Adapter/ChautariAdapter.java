@@ -52,11 +52,9 @@ public class ChautariAdapter extends RecyclerView.Adapter<ChautariAdapter.ViewHo
         String mediaString;
         if (chautariDtoList.get(position).getMedia() != null) {
             mediaString = chautariDtoList.get(position).getMedia().toString();
-
             if (media.checkMedia(mediaString) == 1) {
                 holder.vProfile_share_Video.setVideoPath(chautariDtoList.get(position).getMedia());
                 Toast.makeText(DcoContext, "" + chautariDtoList.get(position).getMedia(), Toast.LENGTH_LONG).show();
-//        holder.vProfile_share_Video.setVideoPath("https://www.namastenepal.com/media/TensorFlow_Tutorial_-_Deep_Learning.mp4");
             } else if (media.checkMedia(mediaString) == 0) {
                 Glide.with(DcoContext).
                         load(chautariDtoList.get(position).getMedia())
@@ -92,7 +90,7 @@ public class ChautariAdapter extends RecyclerView.Adapter<ChautariAdapter.ViewHo
             vProfile_Samaj_Name = itemView.findViewById(R.id.profile_timline_samaj_name);
             vProfile_Shared_Image = itemView.findViewById(R.id.profile_share_image_chautari);
             vProfile_share_Video.start();
-            DcoMediaController=new MediaController(DcoContext);
+            DcoMediaController = new MediaController(DcoContext);
             DcoMediaController.setMediaPlayer(vProfile_share_Video);
         }
     }

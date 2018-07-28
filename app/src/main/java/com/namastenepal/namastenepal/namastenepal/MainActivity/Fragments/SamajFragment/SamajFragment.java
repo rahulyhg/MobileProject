@@ -74,7 +74,6 @@ public class SamajFragment extends Fragment implements SwipeRefreshLayout.OnRefr
             @Override
             public void onFailure(Call<List<SamajDto>> call, Throwable t) {
                 vSwipeRefreshLayout.setRefreshing(true);
-                Toast.makeText(getContext(), "" + t, Toast.LENGTH_SHORT).show();
             }
         });
 
